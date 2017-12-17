@@ -33,8 +33,7 @@ namespace ProjektArbeit
 
             frmFunktion.Show();
 
-            // int n = 3;
-		int f = 4;
+            
             // cmdFunktionen.Text = n.ToString();
 
         }
