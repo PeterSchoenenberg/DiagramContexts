@@ -28,6 +28,8 @@ namespace ProjektArbeit
         Kurve curve2 = null;
         Kurve curve3 = null;
 
+int g = 7;
+
         DiagParam mp;
 
         RadioButton btnRadLast = null;
