@@ -35,17 +35,19 @@
             // 
             // tbDatabaseName
             // 
-            this.tbDatabaseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDatabaseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDatabaseName.ForeColor = System.Drawing.Color.Indigo;
             this.tbDatabaseName.Location = new System.Drawing.Point(60, 73);
             this.tbDatabaseName.Name = "tbDatabaseName";
             this.tbDatabaseName.Size = new System.Drawing.Size(184, 24);
             this.tbDatabaseName.TabIndex = 0;
-            this.tbDatabaseName.Text = "SqliteLaendergrenzen";
+            this.tbDatabaseName.Text = "SqliteLaendergrenzen2";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(57, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 18);
@@ -55,6 +57,7 @@
             // btnImport
             // 
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.Indigo;
             this.btnImport.Location = new System.Drawing.Point(60, 113);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(184, 36);
@@ -67,6 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(473, 388);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.label1);

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Threading;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -27,7 +28,6 @@ namespace ProjektArbeit
         Kurve curve1 = null;
         Kurve curve2 = null;
         Kurve curve3 = null;
-
 
         DiagParam mp;
 
@@ -622,6 +622,10 @@ namespace ProjektArbeit
 
         private void cmdReset_Click(object sender, EventArgs e)
         {
+            chkAktiv1.Checked = false;
+            chkAktiv2.Checked = false;
+            chkAktiv3.Checked = false;
+            curves.Clear();
             updownminx.Value = -8.0m;
             updownmaxx.Value = +8.0m;
             updownminy.Value = -10.0m;
@@ -790,6 +794,40 @@ namespace ProjektArbeit
             }
 
             btnRadLast = radBtn;
+        }
+
+        private void cmdRandom_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            curves.Clear();
+            Kurve ka = new Kurve();
+            List<XYPoint> pk = new List<XYPoint>();
+            pk.Clear();
+            ka.setParser(null);
+            ka.setKurvenart(Punktform.DICKER_PUNKT);
+            ka.setKurvenfarbe(Color.Yellow);
+            ka.setXEinheit("");
+            ka.setYEinheit("");
+            ka.setFktText("");
+
+            ka.setWerte(pk);
+            curves.Add(ka);
+            for (int i = 0; i < 1000; i++)
+            {
+                double r1 = r.NextDouble();
+                double r2 = r.NextDouble();
+                XYPoint pxy = new XYPoint(r1* 18 -9, r2  * 20 - 10);
+                pk.Add(pxy);
+                curves.Clear();
+                ka.setWerte(pk);
+                curves.Add(ka);
+               
+                //if ((i % 100) == 0)
+                    panDiag.Refresh();
+                Thread.Sleep(1);
+            }
+            this.Refresh();
+
         }
     }
 }

@@ -65,14 +65,15 @@
             this.updownminx = new System.Windows.Forms.NumericUpDown();
             this.updownminy = new System.Windows.Forms.NumericUpDown();
             this.panTop = new System.Windows.Forms.Panel();
-            this.cmdReset = new System.Windows.Forms.Button();
-            this.btnImageErstellen = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.grpEinpassen = new System.Windows.Forms.GroupBox();
-            this.radFkt1 = new System.Windows.Forms.RadioButton();
-            this.radFkt2 = new System.Windows.Forms.RadioButton();
-            this.radFkt3 = new System.Windows.Forms.RadioButton();
             this.radKeine = new System.Windows.Forms.RadioButton();
+            this.radFkt3 = new System.Windows.Forms.RadioButton();
+            this.radFkt2 = new System.Windows.Forms.RadioButton();
+            this.radFkt1 = new System.Windows.Forms.RadioButton();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnImageErstellen = new System.Windows.Forms.Button();
+            this.cmdReset = new System.Windows.Forms.Button();
+            this.cmdRandom = new System.Windows.Forms.Button();
             this.panMainLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -99,6 +100,7 @@
             // 
             // panMainLeft
             // 
+            this.panMainLeft.BackColor = System.Drawing.Color.Cornsilk;
             this.panMainLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panMainLeft.Controls.Add(this.btnRahmenfarbe);
             this.panMainLeft.Controls.Add(this.btnHintergrundfarbe);
@@ -123,6 +125,7 @@
             // btnRahmenfarbe
             // 
             this.btnRahmenfarbe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRahmenfarbe.ForeColor = System.Drawing.Color.Indigo;
             this.btnRahmenfarbe.Location = new System.Drawing.Point(15, 719);
             this.btnRahmenfarbe.Name = "btnRahmenfarbe";
             this.btnRahmenfarbe.Size = new System.Drawing.Size(196, 32);
@@ -134,6 +137,7 @@
             // btnHintergrundfarbe
             // 
             this.btnHintergrundfarbe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHintergrundfarbe.ForeColor = System.Drawing.Color.Indigo;
             this.btnHintergrundfarbe.Location = new System.Drawing.Point(15, 676);
             this.btnHintergrundfarbe.Name = "btnHintergrundfarbe";
             this.btnHintergrundfarbe.Size = new System.Drawing.Size(196, 37);
@@ -146,6 +150,7 @@
             // 
             this.chkParameter.AutoSize = true;
             this.chkParameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkParameter.ForeColor = System.Drawing.Color.Indigo;
             this.chkParameter.Location = new System.Drawing.Point(15, 412);
             this.chkParameter.Name = "chkParameter";
             this.chkParameter.Size = new System.Drawing.Size(190, 22);
@@ -158,6 +163,7 @@
             // 
             this.numericUpDown4.DecimalPlaces = 4;
             this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.ForeColor = System.Drawing.Color.Indigo;
             this.numericUpDown4.Location = new System.Drawing.Point(15, 636);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             1000000,
@@ -183,6 +189,7 @@
             // 
             this.numericUpDown3.DecimalPlaces = 4;
             this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.ForeColor = System.Drawing.Color.Indigo;
             this.numericUpDown3.Location = new System.Drawing.Point(15, 581);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             1000000,
@@ -208,6 +215,7 @@
             // 
             this.numericUpDown2.DecimalPlaces = 4;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.ForeColor = System.Drawing.Color.Indigo;
             this.numericUpDown2.Location = new System.Drawing.Point(15, 530);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000000,
@@ -233,6 +241,7 @@
             // 
             this.numericUpDown1.DecimalPlaces = 4;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Indigo;
             this.numericUpDown1.Location = new System.Drawing.Point(15, 471);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000,
@@ -258,6 +267,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Indigo;
             this.label3.Location = new System.Drawing.Point(12, 608);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 18);
@@ -268,6 +278,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Indigo;
             this.label4.Location = new System.Drawing.Point(12, 557);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(172, 18);
@@ -278,6 +289,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
             this.label2.Location = new System.Drawing.Point(12, 498);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 18);
@@ -288,6 +300,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(12, 447);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 18);
@@ -318,6 +331,7 @@
             // lblFunktion3
             // 
             this.lblFunktion3.AutoSize = true;
+            this.lblFunktion3.ForeColor = System.Drawing.Color.Indigo;
             this.lblFunktion3.Location = new System.Drawing.Point(14, 9);
             this.lblFunktion3.Name = "lblFunktion3";
             this.lblFunktion3.Size = new System.Drawing.Size(57, 13);
@@ -338,6 +352,7 @@
             // 
             this.chkAktiv3.AutoSize = true;
             this.chkAktiv3.BackColor = System.Drawing.Color.Yellow;
+            this.chkAktiv3.ForeColor = System.Drawing.Color.Indigo;
             this.chkAktiv3.Location = new System.Drawing.Point(18, 8);
             this.chkAktiv3.Name = "chkAktiv3";
             this.chkAktiv3.Size = new System.Drawing.Size(50, 17);
@@ -371,6 +386,7 @@
             // 
             this.panFunktion2.BackColor = System.Drawing.Color.Yellow;
             this.panFunktion2.Controls.Add(this.lblFunktion2);
+            this.panFunktion2.ForeColor = System.Drawing.Color.Indigo;
             this.panFunktion2.Location = new System.Drawing.Point(12, 86);
             this.panFunktion2.Name = "panFunktion2";
             this.panFunktion2.Size = new System.Drawing.Size(80, 30);
@@ -400,6 +416,7 @@
             // 
             this.chkAktiv2.AutoSize = true;
             this.chkAktiv2.BackColor = System.Drawing.Color.Yellow;
+            this.chkAktiv2.ForeColor = System.Drawing.Color.Indigo;
             this.chkAktiv2.Location = new System.Drawing.Point(18, 8);
             this.chkAktiv2.Name = "chkAktiv2";
             this.chkAktiv2.Size = new System.Drawing.Size(50, 17);
@@ -442,6 +459,7 @@
             // lblFunktion1
             // 
             this.lblFunktion1.AutoSize = true;
+            this.lblFunktion1.ForeColor = System.Drawing.Color.Indigo;
             this.lblFunktion1.Location = new System.Drawing.Point(14, 9);
             this.lblFunktion1.Name = "lblFunktion1";
             this.lblFunktion1.Size = new System.Drawing.Size(57, 13);
@@ -462,6 +480,7 @@
             // 
             this.chkAktiv1.AutoSize = true;
             this.chkAktiv1.BackColor = System.Drawing.Color.Yellow;
+            this.chkAktiv1.ForeColor = System.Drawing.Color.Indigo;
             this.chkAktiv1.Location = new System.Drawing.Point(18, 8);
             this.chkAktiv1.Name = "chkAktiv1";
             this.chkAktiv1.Size = new System.Drawing.Size(50, 17);
@@ -610,7 +629,10 @@
             // 
             // panTop
             // 
+            this.panTop.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panTop.BackColor = System.Drawing.Color.Cornsilk;
             this.panTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panTop.Controls.Add(this.cmdRandom);
             this.panTop.Controls.Add(this.grpEinpassen);
             this.panTop.Controls.Add(this.btnPrint);
             this.panTop.Controls.Add(this.btnImageErstellen);
@@ -621,39 +643,6 @@
             this.panTop.Size = new System.Drawing.Size(654, 115);
             this.panTop.TabIndex = 1;
             // 
-            // cmdReset
-            // 
-            this.cmdReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdReset.Location = new System.Drawing.Point(16, 12);
-            this.cmdReset.Name = "cmdReset";
-            this.cmdReset.Size = new System.Drawing.Size(104, 31);
-            this.cmdReset.TabIndex = 0;
-            this.cmdReset.Text = "Reset";
-            this.cmdReset.UseVisualStyleBackColor = true;
-            this.cmdReset.Click += new System.EventHandler(this.cmdReset_Click);
-            // 
-            // btnImageErstellen
-            // 
-            this.btnImageErstellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImageErstellen.Location = new System.Drawing.Point(126, 12);
-            this.btnImageErstellen.Name = "btnImageErstellen";
-            this.btnImageErstellen.Size = new System.Drawing.Size(115, 31);
-            this.btnImageErstellen.TabIndex = 1;
-            this.btnImageErstellen.Text = "Bild erstellen";
-            this.btnImageErstellen.UseVisualStyleBackColor = true;
-            this.btnImageErstellen.Click += new System.EventHandler(this.btnImageErstellen_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Location = new System.Drawing.Point(247, 12);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(242, 31);
-            this.btnPrint.TabIndex = 2;
-            this.btnPrint.Text = "Bild drucken (15cm * 10 cm)";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // grpEinpassen
             // 
             this.grpEinpassen.Controls.Add(this.radKeine);
@@ -661,45 +650,13 @@
             this.grpEinpassen.Controls.Add(this.radFkt2);
             this.grpEinpassen.Controls.Add(this.radFkt1);
             this.grpEinpassen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpEinpassen.ForeColor = System.Drawing.Color.Indigo;
             this.grpEinpassen.Location = new System.Drawing.Point(16, 49);
             this.grpEinpassen.Name = "grpEinpassen";
             this.grpEinpassen.Size = new System.Drawing.Size(612, 46);
             this.grpEinpassen.TabIndex = 3;
             this.grpEinpassen.TabStop = false;
             this.grpEinpassen.Text = "Einpassen";
-            // 
-            // radFkt1
-            // 
-            this.radFkt1.AutoSize = true;
-            this.radFkt1.Location = new System.Drawing.Point(86, 18);
-            this.radFkt1.Name = "radFkt1";
-            this.radFkt1.Size = new System.Drawing.Size(105, 22);
-            this.radFkt1.TabIndex = 0;
-            this.radFkt1.Text = "Funktion 1";
-            this.radFkt1.UseVisualStyleBackColor = true;
-            this.radFkt1.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
-            // 
-            // radFkt2
-            // 
-            this.radFkt2.AutoSize = true;
-            this.radFkt2.Location = new System.Drawing.Point(197, 18);
-            this.radFkt2.Name = "radFkt2";
-            this.radFkt2.Size = new System.Drawing.Size(105, 22);
-            this.radFkt2.TabIndex = 1;
-            this.radFkt2.Text = "Funktion 2";
-            this.radFkt2.UseVisualStyleBackColor = true;
-            this.radFkt2.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
-            // 
-            // radFkt3
-            // 
-            this.radFkt3.AutoSize = true;
-            this.radFkt3.Location = new System.Drawing.Point(308, 18);
-            this.radFkt3.Name = "radFkt3";
-            this.radFkt3.Size = new System.Drawing.Size(105, 22);
-            this.radFkt3.TabIndex = 2;
-            this.radFkt3.Text = "Funktion 3";
-            this.radFkt3.UseVisualStyleBackColor = true;
-            this.radFkt3.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
             // 
             // radKeine
             // 
@@ -713,6 +670,87 @@
             this.radKeine.Text = "Nicht einpassen";
             this.radKeine.UseVisualStyleBackColor = true;
             this.radKeine.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
+            // 
+            // radFkt3
+            // 
+            this.radFkt3.AutoSize = true;
+            this.radFkt3.Location = new System.Drawing.Point(308, 18);
+            this.radFkt3.Name = "radFkt3";
+            this.radFkt3.Size = new System.Drawing.Size(105, 22);
+            this.radFkt3.TabIndex = 2;
+            this.radFkt3.Text = "Funktion 3";
+            this.radFkt3.UseVisualStyleBackColor = true;
+            this.radFkt3.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
+            // 
+            // radFkt2
+            // 
+            this.radFkt2.AutoSize = true;
+            this.radFkt2.Location = new System.Drawing.Point(197, 18);
+            this.radFkt2.Name = "radFkt2";
+            this.radFkt2.Size = new System.Drawing.Size(105, 22);
+            this.radFkt2.TabIndex = 1;
+            this.radFkt2.Text = "Funktion 2";
+            this.radFkt2.UseVisualStyleBackColor = true;
+            this.radFkt2.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
+            // 
+            // radFkt1
+            // 
+            this.radFkt1.AutoSize = true;
+            this.radFkt1.Location = new System.Drawing.Point(86, 18);
+            this.radFkt1.Name = "radFkt1";
+            this.radFkt1.Size = new System.Drawing.Size(105, 22);
+            this.radFkt1.TabIndex = 0;
+            this.radFkt1.Text = "Funktion 1";
+            this.radFkt1.UseVisualStyleBackColor = true;
+            this.radFkt1.CheckedChanged += new System.EventHandler(this.radEinpassen_CheckedChanged);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.Indigo;
+            this.btnPrint.Location = new System.Drawing.Point(247, 12);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(242, 31);
+            this.btnPrint.TabIndex = 2;
+            this.btnPrint.Text = "Bild drucken (15cm * 10 cm)";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnImageErstellen
+            // 
+            this.btnImageErstellen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImageErstellen.ForeColor = System.Drawing.Color.Indigo;
+            this.btnImageErstellen.Location = new System.Drawing.Point(126, 12);
+            this.btnImageErstellen.Name = "btnImageErstellen";
+            this.btnImageErstellen.Size = new System.Drawing.Size(115, 31);
+            this.btnImageErstellen.TabIndex = 1;
+            this.btnImageErstellen.Text = "Bild erstellen";
+            this.btnImageErstellen.UseVisualStyleBackColor = true;
+            this.btnImageErstellen.Click += new System.EventHandler(this.btnImageErstellen_Click);
+            // 
+            // cmdReset
+            // 
+            this.cmdReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReset.ForeColor = System.Drawing.Color.Indigo;
+            this.cmdReset.Location = new System.Drawing.Point(16, 12);
+            this.cmdReset.Name = "cmdReset";
+            this.cmdReset.Size = new System.Drawing.Size(104, 31);
+            this.cmdReset.TabIndex = 0;
+            this.cmdReset.Text = "Reset";
+            this.cmdReset.UseVisualStyleBackColor = true;
+            this.cmdReset.Click += new System.EventHandler(this.cmdReset_Click);
+            // 
+            // cmdRandom
+            // 
+            this.cmdRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdRandom.ForeColor = System.Drawing.Color.Indigo;
+            this.cmdRandom.Location = new System.Drawing.Point(495, 12);
+            this.cmdRandom.Name = "cmdRandom";
+            this.cmdRandom.Size = new System.Drawing.Size(133, 31);
+            this.cmdRandom.TabIndex = 4;
+            this.cmdRandom.Text = "Random";
+            this.cmdRandom.UseVisualStyleBackColor = true;
+            this.cmdRandom.Click += new System.EventHandler(this.cmdRandom_Click);
             // 
             // Funktion
             // 
@@ -808,6 +846,7 @@
         private System.Windows.Forms.RadioButton radFkt3;
         private System.Windows.Forms.RadioButton radFkt2;
         private System.Windows.Forms.RadioButton radFkt1;
+        private System.Windows.Forms.Button cmdRandom;
     }
 }
 

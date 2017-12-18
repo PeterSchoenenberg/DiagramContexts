@@ -17,7 +17,6 @@ C:\Users\PS\Documents\Visual Studio 2017\Projects\ProjektArbeit\ProjektArbeit\ob
 C:\Users\PS\Documents\Visual Studio 2017\Projects\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.exe
 C:\Users\PS\Documents\Visual Studio 2017\Projects\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.pdb
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.Funktion.resources
-C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.FrmMain.resources
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\bin\Debug\System.Data.SQLite.dll
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\bin\Debug\System.Data.SQLite.xml
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.FrmPunktwolkenSqlite.resources
@@ -35,3 +34,5 @@ C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.XmlGpxImport.resources
+C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.FrmMain.resources
+C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.BildAnalyse.resources

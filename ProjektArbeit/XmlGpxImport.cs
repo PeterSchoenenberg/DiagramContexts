@@ -60,7 +60,7 @@ namespace ProjektArbeit
 
             string sx = "";
             string sy = "";
-
+            
             SQLiteConnection m_dbConnection2;
             m_dbConnection2 = new SQLiteConnection("Data Source=" + dbname + ";Version=3;");
             m_dbConnection2.Open();
@@ -85,7 +85,8 @@ namespace ProjektArbeit
                             }
                             nidx++;
                             string sql = "insert into laendergrenzen (idx, breite, laenge) values ("+nidx+","+sy+","+sx+")";
-                            command2 = new SQLiteCommand(sql, m_dbConnection2);
+                            if (nidx < 2)
+                                command2 = new SQLiteCommand(sql, m_dbConnection2);
                             command2.ExecuteNonQuery();
 
 

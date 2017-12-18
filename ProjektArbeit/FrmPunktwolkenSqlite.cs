@@ -51,12 +51,14 @@ namespace ProjektArbeit
                 this.Text = "Auslesen aus sqlite - Datenbanken";
                 btnGPX.Visible = true;
                 btnPostleitzahlen.Visible = true;
+                btnLaendergrenzensqlite.Visible = true;
             }
             else if (dbKind == DatabaseKind.dbAccess)
             {
                 this.Text = "Auslesen aus Access - Datenbanken";
                 btnGPX.Visible = false;
                 btnPostleitzahlen.Visible = false;
+                btnLaendergrenzensqlite.Visible = false;
             }
             else
                 this.Text = "Fehler: dbKind nicht richtig gesetzt";
@@ -601,5 +603,197 @@ namespace ProjektArbeit
 
         }
 
+        private void btnLaendergrenzensqlite_Click(object sender, EventArgs e)
+        {
+            grdView.Rows.Clear();
+
+
+            diag = null;
+            diaglg = null;
+            panRight.Controls.Clear();
+            List<XYPoint> werte = null;
+            DiagParam mp = new DiagParam("", "");
+            mp.setcRahmenfarbe(Color.Black);
+            Kurve curve4 = new Kurve();
+            // SQLiteConnection.CreateFile("MyDatabase.sqlite");
+
+            if (dbKind == DatabaseKind.dbSqlite)
+            {
+
+                SQLiteConnection m_dbConnection;
+                SQLiteDataReader reader = null;
+                m_dbConnection = new SQLiteConnection("Data Source=SqliteLaendergrenzen.db");
+                m_dbConnection.Open();
+                String xf = "select idx,breite,laenge  from laendergrenzen order by breite";
+                SQLiteCommand command = new SQLiteCommand(xf, m_dbConnection);
+                try
+                {
+                    reader = command.ExecuteReader();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                String[] columnNames = new String[2];
+                columnNames[0] = "Breite";
+                columnNames[1] = "Laenge";
+                werte = new List<XYPoint>();
+                while (reader.Read())
+                {
+                    XYPoint p = new XYPoint();
+                    int sname = reader.GetInt32(0);
+                    p.setstr(sname.ToString());
+                    double dx = reader.GetDouble(2);
+                    double dy = reader.GetDouble(1);
+
+                    /*
+                    string sx = reader.GetString(2);
+                    string sy = reader.GetString(1);
+                    sx.Replace(',', '.');
+                    sy.Replace(',', '.');
+                    double dx = Convert.ToDouble(sx);
+                    double dy = Convert.ToDouble(sy);
+                    */
+                    p.setX(dx);
+                    p.setY(dy);
+                    if (!(((p.getX() < 1) || (p.getX() > 40) || (p.getY() < 40)
+                    || (p.getY() > 60))))
+                    {
+                        werte.Add(p);
+                        int nRow = grdView.Rows.Add();
+                        DataGridViewRow grdRow = grdView.Rows[nRow];
+                        DataGridViewCellCollection grdCell = grdRow.Cells;
+                        grdCell[0].Value = nRow.ToString();
+                        grdCell[1].Value = sname;
+                        grdCell[2].Value = dx.ToString();
+                        grdCell[3].Value = dy.ToString();
+
+                    }
+                }
+                reader.Close();
+
+            }
+            else if (dbKind == DatabaseKind.dbAccess)
+            {
+                OleDbConnection con = new OleDbConnection();
+                OleDbCommand cmd = new OleDbCommand();
+                OleDbDataReader reader;
+
+
+                con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +
+                    "Data Source=Haltestellen.accdb";
+
+                cmd.Connection = con;
+                cmd.CommandText = "SELECT name,breite,laenge  FROM D_Bahnhof_2017_09";
+
+                try
+                {
+                    con.Open();
+
+                    reader = cmd.ExecuteReader();
+                    werte = new List<XYPoint>();
+
+                    while (reader.Read())
+                    {
+                        XYPoint p = new XYPoint();
+                        string sname = reader.GetString(0);
+                        p.setstr(sname);
+                        double dx = reader.GetDouble(2);
+                        double dy = reader.GetDouble(1);
+                        //sx.Replace(',', '.');
+                        //sy.Replace(',', '.');
+                        //double dx = Convert.ToDouble(sx);
+                        //double dy = Convert.ToDouble(sy);
+
+                        p.setX(dx);
+                        p.setY(dy);
+                        if (!(((p.getX() < 1) || (p.getX() > 40) || (p.getY() < 40)
+                        || (p.getY() > 60))))
+                        {
+                            werte.Add(p);
+                            int nRow = grdView.Rows.Add();
+                            DataGridViewRow grdRow = grdView.Rows[nRow];
+                            DataGridViewCellCollection grdCell = grdRow.Cells;
+                            grdCell[0].Value = nRow.ToString();
+                            grdCell[1].Value = sname;
+                            grdCell[2].Value = dx.ToString();
+                            grdCell[3].Value = dy.ToString(); ;
+
+                        }
+                    }
+                    reader.Close();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+            }
+
+            curve4.setParser(null);
+            curve4.setKurvenart(Punktform.PUNKT);
+            curve4.setKurvenfarbe(Color.Black);
+            curve4.setXEinheit("Längengrade");
+            curve4.setYEinheit("Breitengrade");
+            curve4.setFktText("");
+            curve4.setWerte(werte);
+            curve4.bestimmeMinMaxWerte();
+
+
+            /*
+            if (radNurDatum.isSelected())
+                curve4.setDatumart(Datumart.NurDatum);
+            else if (radNurZeit.isSelected())
+                curve4.setDatumart(Datumart.NurZeit);
+            else if (radZeitDatum.isSelected())
+                curve4.setDatumart(Datumart.DatumUndZeit);
+            */
+            curvesht = new List<Kurve>();
+
+            curvesht.Add(curve4);
+            diaght = new Diagramm(5, 16, 47, 56, curvesht, mp);
+            /*
+            diaght.ShowSpecialValuesString = "Hbf";
+            diaght.ShowSpecialValuesColor = Color.Blue;
+            diaght.ShowSpecialValues = true;
+            */
+
+
+            //pan.Refresh();
+
+            double dxmin = curve4.getxMin();
+            double dxmax = curve4.getxMax();
+            double dymin = curve4.getyMin();
+            double dymax = curve4.getyMax();
+
+            diaght.setxRaster(true);
+            diaght.setyRaster(true);
+
+            //diaght.set
+            curve4.bestimmeMinMaxWerte();
+            /*
+            diaght.setxMin(0.0);
+            diaght.setxMax(20);
+            diaght.setyMin(40);
+            diaght.setyMax(70);
+            */
+            diaght.setxMin(curve4.getxMin());
+            diaght.setxMax(curve4.getxMax());
+            diaght.setyMin(curve4.getyMin());
+            diaght.setyMax(curve4.getyMax());
+            diaght.BackColor = Color.LightGreen;
+            diaght.HintColor = Color.Black;
+
+
+            diaght.WithShowString = false;
+
+            //diag.Refresh();
+            panRight.Controls.Add(diaght);
+
+
+        }
     }
 }
