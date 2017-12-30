@@ -37,6 +37,7 @@
             this.punktwolkenAusAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.xMLGPXImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bildanalyseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panPunktSqlite = new System.Windows.Forms.Panel();
             this.lblSqlite = new System.Windows.Forms.Label();
             this.panAccessClouds = new System.Windows.Forms.Panel();
@@ -48,7 +49,7 @@
             this.oTree = new System.Windows.Forms.TreeView();
             this.oSplit = new System.Windows.Forms.Splitter();
             this.panMain = new System.Windows.Forms.Panel();
-            this.bildanalyseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.panPunktSqlite.SuspendLayout();
             this.panAccessClouds.SuspendLayout();
@@ -64,7 +65,8 @@
             this.menu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
-            this.werkzeugeToolStripMenuItem});
+            this.werkzeugeToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(621, 40);
@@ -132,6 +134,13 @@
             this.xMLGPXImportToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.xMLGPXImportToolStripMenuItem.Text = "XML-GPX Import";
             this.xMLGPXImportToolStripMenuItem.Click += new System.EventHandler(this.lblXmlGpxImport_Click);
+            // 
+            // bildanalyseToolStripMenuItem
+            // 
+            this.bildanalyseToolStripMenuItem.Name = "bildanalyseToolStripMenuItem";
+            this.bildanalyseToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.bildanalyseToolStripMenuItem.Text = "Bildanalyse";
+            this.bildanalyseToolStripMenuItem.Click += new System.EventHandler(this.bildanalyseToolStripMenuItem_Click);
             // 
             // panPunktSqlite
             // 
@@ -265,12 +274,12 @@
             this.panMain.Size = new System.Drawing.Size(414, 360);
             this.panMain.TabIndex = 11;
             // 
-            // bildanalyseToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.bildanalyseToolStripMenuItem.Name = "bildanalyseToolStripMenuItem";
-            this.bildanalyseToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.bildanalyseToolStripMenuItem.Text = "Bildanalyse";
-            this.bildanalyseToolStripMenuItem.Click += new System.EventHandler(this.bildanalyseToolStripMenuItem_Click);
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 36);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -318,5 +327,6 @@
         private System.Windows.Forms.Splitter oSplit;
         private System.Windows.Forms.Panel panMain;
         private System.Windows.Forms.ToolStripMenuItem bildanalyseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

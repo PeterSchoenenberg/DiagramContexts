@@ -19,7 +19,7 @@ namespace ProjektArbeit
     public partial class FrmMain : Form
     {
         List<XYPoint> werte = null;
-
+ 
         Kurve curve;
         TreeNode nodeClose = null;
         TreeNode nodeFunctions = null;
@@ -243,6 +243,12 @@ namespace ProjektArbeit
         {
             BildAnalyse frmBild = new BildAnalyse();
             frmBild.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hilfe frmHilfe = new Hilfe();
+            frmHilfe.ShowDialog();
         }
     }
     class MyRenderer : ToolStripProfessionalRenderer

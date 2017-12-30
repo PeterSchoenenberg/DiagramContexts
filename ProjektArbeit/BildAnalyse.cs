@@ -368,7 +368,7 @@ namespace ProjektArbeit
             {
                 for (int iy = 0; iy < 750; iy++)
                 {
-                    int nRed = objBitmap.GetPixel(ix, iy).R / 10;
+                    int nRed = objBitmap.GetPixel(ix, iy).R / 10 ;
                     int nGreen = objBitmap.GetPixel(ix, iy).G / 10;
                     int nBlue = objBitmap.GetPixel(ix, iy).B ;
 

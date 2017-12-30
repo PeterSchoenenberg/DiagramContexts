@@ -36,3 +36,4 @@ C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.XmlGpxImport.resources
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.FrmMain.resources
 C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.BildAnalyse.resources
+C:\Users\Alfa\Documents\Visual Studio 2017\Projekte\ProjektArbeit\ProjektArbeit\obj\Debug\ProjektArbeit.Hilfe.resources

@@ -93,6 +93,12 @@
     <Compile Include="Funktion.Designer.cs">
       <DependentUpon>Funktion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hilfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hilfe.Designer.cs">
+      <DependentUpon>Hilfe.cs</DependentUpon>
+    </Compile>
     <Compile Include="parser\parse\FunktionsStruct.cs" />
     <Compile Include="parser\parse\IsZahl.cs" />
     <Compile Include="parser\parse\NKT.cs" />
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Funktion.resx">
       <DependentUpon>Funktion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hilfe.resx">
+      <DependentUpon>Hilfe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

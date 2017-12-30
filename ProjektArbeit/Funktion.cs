@@ -703,8 +703,14 @@ namespace ProjektArbeit
                         throw new NotSupportedException("Dateiendung wird nicht unterstützt!");
                 }
 
-                bitmap.Save(path, imageFormat);
-
+                try
+                {
+                    bitmap.Save(path, imageFormat);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bild kann nicht abgespeichert werden!");
+                }
             }
         }
 
@@ -725,8 +731,14 @@ namespace ProjektArbeit
             PrintDialog pddiag = new PrintDialog();
             pddiag.Document = pd;
             pddiag.ShowDialog();
-
-            pd.Print();
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dokument kann nicht gedruckt werden!");
+            }
         }
 
         void pd_PrintPage(object sender, PrintPageEventArgs e)
